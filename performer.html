@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>EventCon</title>
+    <title>IICACS 2024</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/slicknav.css">
-
+    <script type="text/javascript" src="css/jquery.countdown/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="js/vendor/js/main.js"></script>
+  
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
@@ -42,7 +44,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-3 col-lg-3">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="performer.html">
                                         <img src="img/logo.png" alt="">
                                     </a>
                                 </div>
@@ -51,24 +53,9 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">home</a></li>
-                                            <li><a href="Performer.html">Performer</a></li>
-                                            
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="about.html">about</a></li>
-                                                    <li><a href="Program.html">Program</a></li>
-                                                    <li><a href="Venue.html">Venue</a></li>
-                                                    <li><a href="elements.html">elements</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="performer.html">Home</a></li>
+                                            <li><a href="Program.html">Speakers</a></li>
+                                            <li><a href="register.html">Register</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -99,13 +86,25 @@
                     <div class="row align-items-center justify-content-center">
                        <div class="col-xl-12">
                           <div class="bradcam_text text-center">
-                            <div class="shape_1 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <img src="img/shape/shape_1.svg" alt="">
+                            <div class="slider_text text-center">
+                                <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Indonesia Institute of The Arts, Surakarta 2024</span>
+                                <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">“International and Interdisciplinary 
+                                    Conference on Arts Creation and 
+                                    Studies" </p>
                             </div>
-                            <div class="shape_2 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">
-                                <img src="img/shape/shape_2.svg" alt="">
+                            <div class="slider_text text-center">
+                                <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Theme : “Cross Culture Borders”</span>
+                                <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Cross Cultural Borders is an important thing in the dynamic world of art and is able to empower other aspects for the advancement of the world.
+                                </p>
                             </div>
-                                <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">IICACS</h3>
+                                <!-- countdown__module hide undefined -->
+                                <div class="countdown__module wow fadeInDown" data-wow-duration="1s" data-wow-delay=".6s" data-date="2024/08/29">
+                                    <p><span>%D</span> Days</p>
+                                    <p><span>%H</span> Hours</p>
+                                    <p><span>%M</span> Minutes</p>
+                                    <p><span>%S</span> Seconds</p>
+                                </div>
+                                <!-- End / countdown__module hide undefined -->
                           </div>
                        </div>
                     </div>
@@ -114,61 +113,69 @@
      </div>
     <!-- bradcam_area end -->
 
-    <!-- performar_area_start  -->
-    <div class="performar_area black_bg">
+
+    <div id="program_details" class="program_details_area detials_bg_1 overlay2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section_title mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Performer</h3>
+                    <div class="section_title text-center mb-80  wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                        <h3>Program Details</h3>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/1.png" alt="">
+                    <div class="program_detail_wrap">
+                        <div class="single_propram">
+                            <div class="inner_wrap">
+                                <div class="circle_img"></div>
+                                <div class="porgram_top">
+                                    <span class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">3.00-4.00pm</span>
+                                    <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4>
                                 </div>
-                                <div class="performer_heading">
-                                    <h4>Mr. Zosoldos</h4>
-                                    <span>Acoustic drum</span>
+                                <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <img src="img/program_details/1.png" alt="">
                                 </div>
+                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/2.png" alt="">
+                        <div class="single_propram">
+                            <div class="inner_wrap">
+                                <div class="circle_img"></div>
+                                <div class="porgram_top">
+                                    <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">3.00-4.00pm</span>
+                                    <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4>
                                 </div>
-                                <div class="performer_heading">
-                                    <h4>Protik Hasan</h4>
-                                    <span>Acoustic drum</span>
+                                <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <img src="img/program_details/2.png" alt="">
                                 </div>
+                                <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                <div  data-tilt class="thumb">
-                                    <img src="img/performer/3.png" alt="">
+                        <div class="single_propram">
+                            <div class="inner_wrap">
+                                <div class="circle_img"></div>
+                                <div class="porgram_top">
+                                    <span class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">3.00-4.00pm</span>
+                                    <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4>
                                 </div>
-                                <div class="performer_heading">
-                                    <h4>Salmon Vicky</h4>
-                                    <span>Acoustic drum</span>
+                                <div class="thumb  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <img src="img/program_details/3.png" alt="">
                                 </div>
+                                <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div   class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/4.png" alt="">
+                        <div class="single_propram">
+                            <div class="inner_wrap">
+                                <div class="circle_img"></div>
+                                <div class="porgram_top">
+                                    <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">3.00-4.00pm</span>
+                                    <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4>
                                 </div>
-                                <div class="performer_heading">
-                                    <h4>Filaris Habol</h4>
-                                    <span>Acoustic drum</span>
+                                <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <img src="img/program_details/4.png" alt="">
                                 </div>
+                                <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4>
                             </div>
                         </div>
                     </div>
@@ -176,71 +183,6 @@
             </div>
         </div>
     </div>
-    <!-- performar_area_end  -->
-
-
-    <!-- map_area_start  -->
-    <div class="map_area">
-        <div id="map" style="height: 600px; position: relative; overflow: hidden;">
-        
-        </div>
-        <script>
-            function initMap() {
-                var uluru = {
-                    lat: -25.363,
-                    lng: 131.044
-                };
-                var grayStyles = [{
-                        featureType: "all",
-                        stylers: [{
-                                saturation: -90
-                            },
-                            {
-                                lightness: 50
-                            }
-                        ]
-                    },
-                    {
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#ccdee9'
-                        }]
-                    }
-                ];
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {
-                        lat: -31.197,
-                        lng: 150.744
-                    },
-                    zoom: 9,
-                    styles: grayStyles,
-                    scrollwheel: false
-                });
-            }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
-        </script>
-        <div class="location_information black_bg wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-            <h3>Concert 2020</h3>
-            <div class="info_wrap">
-                <div class="single_info">
-                    <span>Vanue:</span>
-                    <p>26/A, Coontum Avenu
-                        New York-2783</p>
-                </div>
-                <div class="single_info">
-                    <span>Phone:</span>
-                    <p>+10 (88) 267 368 283</p>
-                </div>
-                <div class="single_info">
-                    <span>Email:</span>
-                    <p>contact@concert20.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- map_area_end  -->
-
     <!-- brand_area_start  -->
     <div class="brand_area black_bg">
         <div class="container">
@@ -337,6 +279,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/tilt.jquery.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/jquery.countdown/jquery.countdown.min.js"></script>
+    
+
+    
+    
 
 
 

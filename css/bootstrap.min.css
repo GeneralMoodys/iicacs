@@ -76,7 +76,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    text-align: left;
+    text-align:center;
     background-color: #fff
 }
 
@@ -224,7 +224,8 @@ figure {
 
 img {
     vertical-align: middle;
-    border-style: none
+    border-radius: 50%;
+    border: 5px solid #FFDE59;
 }
 
 svg:not(:root) {
@@ -721,8 +722,10 @@ pre code {
     width: 100%;
     min-height: 1px;
     padding-right: 15px;
-    padding-left: 15px
-}
+    padding-left: 15px;
+    padding-top: 13px;
+} 
+/* dils  */
 
 .col {
     -ms-flex-preferred-size: 0;
@@ -4659,7 +4662,7 @@ tbody.collapse.show {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
+    border: 1px solid rgba(0, 0, 0, 0);
     border-radius: .25rem
 }
 
@@ -6431,7 +6434,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: #343a40!important
+    background-image: url(../img/banner/campus.png);
 }
 
 a.bg-dark:focus,

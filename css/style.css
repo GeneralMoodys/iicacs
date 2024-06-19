@@ -193,7 +193,7 @@ h3 {
 
 /* line 136, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
 .black_bg {
-  background: #000000;
+  background-image: url(../img/banner/campus.png);
 }
 
 /* line 139, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
@@ -648,6 +648,70 @@ h3 {
   width: 220px;
 }
 
+.hero__wrapper .countdown__module {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+@media (min-width: 769px) {
+  .hero__wrapper .countdown__module {
+      max-width: 800px;
+      margin: 80px auto;
+  }
+}
+
+.countdown__module {
+  display: table;
+  width: 100%;
+  margin: 35px 0;
+  color: #c2c2c2;
+}
+
+.countdown__module p {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 25%;
+}
+
+@media (min-width: 320px) {
+  .countdown__module p {
+      font-size: calc(.68182vw + 7.81818px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .countdown__module p {
+      font-size: 16px;
+  }
+}
+
+.countdown__module span {
+  display: block;
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 320px) {
+  .countdown__module span {
+      font-size: calc(6.81818vw + 8.18182px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .countdown__module span {
+      font-size: 90px;
+  }
+}
+
 /* line 122, ../../Arafath/CL/December/236. Event-02/HTML/scss/_btn.scss */
 .boxed-btn2 {
   background: transparent;
@@ -851,7 +915,7 @@ h3 {
   float: right;
   margin-top: 0;
   padding: 0;
-  width: 95%;
+  width: 97%;
   padding: 0;
   border-radius: 0px;
   margin-top: 5px;
@@ -954,13 +1018,13 @@ h3 {
   top: 5px;
   padding: 5px;
   right: 0;
-  margin-top: -5px;
+  margin-top: -55px;
   top: -36px;
 }
 
 /* line 106, ../../Arafath/CL/December/236. Event-02/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav {
-  top: -1px;
+  top: -48px;
 }
 
 /* line 1, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
@@ -1003,7 +1067,7 @@ h3 {
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 16, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
   .header-area .main-header-area {
-    padding: 10px 10px;
+    padding: 15px 10px;
   }
 }
 
@@ -1205,14 +1269,14 @@ h3 {
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 139, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
-    font-size: 15px;
+    font-size: 25px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 139, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
-    font-size: 15px;
+    font-size: 25px;
   }
 }
 
@@ -2025,7 +2089,7 @@ h3 {
 
 /* line 4, ../../Arafath/CL/December/236. Event-02/HTML/scss/_bradcam.scss */
 .bradcam_bg_2 {
-  background-image: url(../img/banner/bradcam_2.png);
+  background-image: url(../img/banner/redyellow.png);
 }
 
 /* line 7, ../../Arafath/CL/December/236. Event-02/HTML/scss/_bradcam.scss */
@@ -2050,7 +2114,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: center center;
   padding-bottom: 142px;
-  padding-top: 250px;
+  padding-top: 200px;
 }
 
 @media (max-width: 767px) {
@@ -2181,7 +2245,7 @@ h3 {
   color: #FFF;
   margin-bottom: 34px;
   margin-top: 10px;
-  font-family: "Monoton", cursive;
+  font-family: "Muli", sans-serif;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -2200,7 +2264,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/236. Event-02/HTML/scss/_performer.scss */
 .performar_area {
-  padding-top: 135px;
+  padding-top: 50px;
   padding-bottom: 63px;
 }
 
@@ -2215,7 +2279,7 @@ h3 {
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 1, ../../Arafath/CL/December/236. Event-02/HTML/scss/_performer.scss */
   .performar_area {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 60px;
   }
 }
@@ -2258,18 +2322,21 @@ h3 {
 
 /* line 30, ../../Arafath/CL/December/236. Event-02/HTML/scss/_performer.scss */
 .performar_area .single_performer .performer_heading h4 {
-  font-size: 30px;
+  font-size: 16.5px;
   font-family: "Anton", sans-serif;
   color: #fff;
   font-weight: 400;
   margin-bottom: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 /* line 37, ../../Arafath/CL/December/236. Event-02/HTML/scss/_performer.scss */
 .performar_area .single_performer .performer_heading span {
   color: #FF4533;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 15px;
+  position: relative;
 }
 
 /* line 2, ../../Arafath/CL/December/236. Event-02/HTML/scss/_brand.scss */

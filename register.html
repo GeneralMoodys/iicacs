@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>EventCon</title>
+    <title>IICACS 2024</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/slicknav.css">
-
+    <link href="css/main.css" rel="stylesheet" media="all">
+  
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
@@ -51,8 +52,7 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="performer.html">Home</a></li>
-                                            <li><a href="Program.html">Speakers</a></li>
+                                            <li><a href="performer.html">home</a></li>
                                             <li><a href="register.html">Register</a></li>
                                         </ul>
                                     </nav>
@@ -77,65 +77,52 @@
     </header>
     <!-- header-end -->
 
-    <div class="performar_area black_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section_title mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Performer</h3>
-                    </div>
+     <!-- bradcam_area -->
+     <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Apply for job</h2>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/1.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Prof. Carol Brown, MA., PhD</h4>
-                                    <span>Professor of Choreography, 
-                                        University of Melbourne, Australia</span>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-row">
+                            <div class="name">Full name</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="full_name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/2.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Prof. Dr. Rene T.A. Lysloff </h4>
-                                    <span>Ethnomusicolog, University of California, Riverside, America</span>
+                        <div class="form-row">
+                            <div class="name">Message</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="message" placeholder="Message sent to the employer"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/3.png" alt="">
+                        <div class="form-row">
+                            <div class="name">Upload CV</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <label class="label--file" for="file">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
                                 </div>
-                                <div class="performer_heading">
-                                    <h4>Harmilyanti Sulistyani, S.T., M.Sc., Ph.D </h4>
-                                    <span>Head of e-Heritage Study Center, 
-                                        Indonesia Institute of the Arts, Surakarta</span>
-                                </div>
+                                <div class="label--desc">Upload your CV/Resume or any other relevant file. Max file size 50 MB</div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div   class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/4.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Misaki Kishi</h4>
-                                    <span>The Graduate University for Advanced Studies, Sokendai</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
                 </div>
             </div>
         </div>
@@ -161,6 +148,11 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/tilt.jquery.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/jquery.countdown/jquery.countdown.min.js"></script>
+    
+
+    
+    
 
 
 
