@@ -529,7 +529,7 @@ h3 {
 
 /* line 27, ../../Arafath/CL/December/236. Event-02/HTML/scss/_btn.scss */
 .boxed-btn3 {
-  background: #FF4533;
+  background: #7B0404;
   /* IE6-9 */
   color: #fff;
   display: inline-block;
@@ -1213,13 +1213,13 @@ h3 {
 
 /* line 100, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
 .header-area .main-header-area .buy_tkt .book_btn a {
-  background: #FF4533;
+  background: #FFDE59;
   font-family: "Anton", sans-serif;
   padding: 12px 46px;
   font-size: 16px;
   font-weight: 400;
   border: 1px solid transparent;
-  color: #fff;
+  color: #7B0404;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
