@@ -147,6 +147,7 @@ label {
   font-weight: 400;
 }
 
+
 /* line 96, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
 *::-moz-selection {
   background: #444;
@@ -2550,7 +2551,7 @@ h3 {
 }
 
 /* line 57, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
-.program_details_area .program_detail_wrap .single_propram:nth-child(2n+1) {
+.program_details_area .program_detail_wrap .single_propram:nth-child(1n+1) {
   float: right;
   width: 100%;
 }
@@ -2563,7 +2564,7 @@ h3 {
 }
 
 /* line 66, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
-.program_details_area .program_detail_wrap .single_propram:nth-child(2n) {
+.program_details_area .program_detail_wrap .single_propram:nth-child(2n+6) {
   width: 100%;
   float: left;
   margin-top: -110px;
@@ -2609,8 +2610,8 @@ h3 {
 
 /* line 90, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
 .program_details_area .program_detail_wrap .single_propram .porgram_top span {
-  color: #FF4533;
-  font-size: 30px;
+  color: #E5DDD5;
+  font-size: 20px;
   font-family: "Anton", sans-serif;
   display: block;
   margin-bottom: 8px;
@@ -2618,7 +2619,7 @@ h3 {
 
 /* line 97, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
 .program_details_area .program_detail_wrap .single_propram .porgram_top h4 {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 400;
   color: #fff;
 }
