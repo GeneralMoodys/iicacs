@@ -1,0 +1,12 @@
+[21-Jun-2024 14:16:23 UTC] PHP Warning:  require(PHPMailer/Exception.php): failed to open stream: No such file or directory in /home/iicacsco/public_html/register.php on line 5
+[21-Jun-2024 14:16:23 UTC] PHP Warning:  require(PHPMailer/Exception.php): failed to open stream: No such file or directory in /home/iicacsco/public_html/register.php on line 5
+[21-Jun-2024 14:16:23 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/Exception.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/iicacsco/public_html/register.php on line 5
+[21-Jun-2024 14:17:05 UTC] PHP Warning:  require(PHPMailer/Exception.php): failed to open stream: No such file or directory in /home/iicacsco/public_html/register.php on line 5
+[21-Jun-2024 14:17:05 UTC] PHP Warning:  require(PHPMailer/Exception.php): failed to open stream: No such file or directory in /home/iicacsco/public_html/register.php on line 5
+[21-Jun-2024 14:17:05 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/Exception.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/iicacsco/public_html/register.php on line 5
+[21-Jun-2024 14:30:01 UTC] PHP Fatal error:  Call to undefined function php_info() in /home/iicacsco/public_html/info.php on line 3
+[21-Jun-2024 14:40:40 UTC] PHP Fatal error:  Class 'SMTP' not found in /home/iicacsco/public_html/register.php on line 12
+[21-Jun-2024 14:42:26 UTC] PHP Fatal error:  Class 'PHPMailer\PHPMailer' not found in /home/iicacsco/public_html/register.php on line 12
+[21-Jun-2024 14:42:29 UTC] PHP Fatal error:  Class 'PHPMailer\PHPMailer' not found in /home/iicacsco/public_html/register.php on line 12
+[21-Jun-2024 14:42:33 UTC] PHP Fatal error:  Class 'PHPMailer\PHPMailer' not found in /home/iicacsco/public_html/register.php on line 12
+[21-Jun-2024 14:42:36 UTC] PHP Fatal error:  Class 'PHPMailer\PHPMailer' not found in /home/iicacsco/public_html/register.php on line 12

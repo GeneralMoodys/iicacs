@@ -1,0 +1,3 @@
+<!--#echo var="HTTP_USER_AGENT" --> 
+<br>
+Your IP : <!--#echo var="REMOTE_ADDR" -->
