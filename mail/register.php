@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = 'Updated';
     }
       
-    $to = "mnprasetya.labs@gmail.com"; //ganti email 
+    $to = "iicacs@isi-ska.ac.id"; //ganti email 
     $subject = "Job Application from $fullName";
     $body = "Full name: $fullName\n" .
             "Category : $category\n" .

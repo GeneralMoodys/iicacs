@@ -151,8 +151,8 @@
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="register.html">Register</a></li>
                                                 <li><a href="payment.html">Payment</a></li>
-                                                <li><a href="Submitfp.html">Full-paper</a></li>
-                                                <li><a href="confrence.html">Confrence</a></li>
+                                                <li><a href="Submitfp.html">Fullpaper</a></li>
+                                                <li><a href="confrence.html">Conference</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -173,9 +173,23 @@
                     </div>
                 </div>
             </div>
-       
+            <div class="brand_area bradcam_bg_1">
+                <div class="container">
+                    <div class="address_details text-center">
+                        <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s" style="padding-top:20px ;">You can submit Payment evidence on 10 August 2024</h3>
+                    </div>
+                    <!-- countdown__module hide undefined -->
+                <div class="countdown__module wow fadeInDown" data-wow-duration="1s" data-wow-delay=".6s" data-date="2024/08/10" >
+                    <p><span style="font-size: 30px; color: #7B0404;">%D</span> Days</p>
+                    <p><span style="font-size: 30px; color: #7B0404;">%H</span> Hours</p>
+                    <p><span style="font-size: 30px; color: #7B0404;">%M</span> Minutes</p>
+                    <p><span style="font-size: 30px; color: #7B0404;">%S</span> Seconds</p>
+                </div>
+                <!-- End / countdown__module hide undefined -->
+                </div>
+            </div>
         <!-- bradcam_area -->
-        <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <!-- <div class="page-wrapper bg-dark p-t-100 p-b-50">
             <div class="wrapper wrapper--w900">
                 <div class="card card-6">
                     <div class="card-heading">
@@ -184,44 +198,6 @@
                     <div class="card-body">
                         <form method="POST"  enctype="multipart/form-data"
                             id="jobApplicationForm">
-                            <div class="form-row">
-                                <div class="name">Full name</div>
-                                <div class="value">
-                                    <input class="input--style-6" type="text" name="full_name" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Category</div>
-                                <div class="value" >
-                                    <label class="radio-inline" for="participant" style="color: #f7f1f1;">
-                                        <input type="radio" id="participant" name="category" value="Participant" required>
-                                        Participant 
-                                    </label>
-
-                                    <label for="presenter" style="color: #f7f1f1;">
-                                        <input  type="radio" id="presenter" name="category" value="Presenter" required>
-                                        Presenter </label>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Institution Organization</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-6" type="text"
-                                            name="Institution" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Sub-Institution</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-6" type="text"
-                                            name="Sub-Institution"
-                                            placeholder="example: Fakultas Ilmu Pendidikan" required>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-row">
                                 <div class="name">Phone Number</div>
                                 <div class="value">
@@ -240,35 +216,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="name">Country</div>
-                                <div class="value">
-                                    <input class="input--style-6" type="text" name="country" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Abstract</div>
-                                <div class="value">
-                                    <div class="input-group js-input-file">
-                                        <input class="input-file" type="file" name="abstract" id="abstractFile">
-                                        <label class="label--file" for="abstractFile">Choose file</label>
-                                        <span class="input-file__info">No file chosen</span>
-                                    </div>
-                                    <div class="label--desc">Upload your abstract file. Max file size 5 MB</div>
-                                </div>
-                            </div>
-                            
-                            <!-- <div class="form-row">
-                                <div class="name">Fullpaper</div>
-                                <div class="value">
-                                    <div class="input-group js-input-file">
-                                        <input class="input-file" type="file" name="fullpaper" id="fullpaperFile">
-                                        <label class="label--file" for="fullpaperFile">Choose file</label>
-                                        <span class="input-file__info">No file chosen</span>
-                                    </div>
-                                    <div class="label--desc">Upload your fullpaper file. Max file size 5 MB</div>
-                                </div>
-                            </div>
                             
                             <div class="form-row">
                                 <div class="name">Transfer Evidence</div>
@@ -280,7 +227,7 @@
                                     </div>
                                     <div class="label--desc">Upload your transfer evidence file. Max file size 5 MB</div>
                                 </div>
-                            </div> -->
+                            </div>
                             <div id="loading-bar-container" style="display: none; position: relative; width: 100%; height: 30px; background-color: #f3f3f3; border-radius: 5px; margin-top: 10px;">
                                 <div id="loading-bar" style="width: 0; height: 100%; background-color: #4caf50; text-align: center; line-height: 30px; color: white; border-radius: 5px;">0%</div>
                             </div>
@@ -288,7 +235,7 @@
 
                             <div class="card-footer">
                                 <button class="btn btn--radius-2 btn--blue-2" type="submit" id="submits">Submit</button>
-                                 <!-- header-end -->
+                                 
                             <div id="loading" style="display: none; width: 100%!important;">
                                 It's being processed, please wait 😉 the data upload speed to the server follows your internet connection 🚀
                             </div>
@@ -304,7 +251,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <footer class="footer ">
             <div class="copy-right_text">

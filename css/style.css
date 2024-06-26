@@ -1270,7 +1270,7 @@ h3 {
 /* line 139, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a {
   color: #FFDE59;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: capitalize;
   font-weight: 400;
   display: inline-block;
@@ -1283,14 +1283,14 @@ h3 {
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 139, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 139, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
-    font-size: 19.5px;
+    font-size: 19px;
   }
 }
 
