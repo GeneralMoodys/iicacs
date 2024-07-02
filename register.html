@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>-->
 <html class="no-js" lang="zxx">
 
     <head>
@@ -179,7 +179,7 @@
             <div class="wrapper wrapper--w900">
                 <div class="card card-6">
                     <div class="card-heading">
-                        <h2 class="title">Submit Article</h2>
+                        <h2 class="title">Register</h2>
                     </div>
                     <div class="card-body">
                         <form method="POST"  enctype="multipart/form-data"
@@ -192,15 +192,15 @@
                             </div>
                             <div class="form-row">
                                 <div class="name">Category</div>
-                                <div class="value" >
+                                <div class="value">
                                     <label class="radio-inline" for="participant" style="color: #f7f1f1;">
                                         <input type="radio" id="participant" name="category" value="Participant" required>
-                                        Participant 
+                                        Participant
                                     </label>
-
                                     <label for="presenter" style="color: #f7f1f1;">
-                                        <input  type="radio" id="presenter" name="category" value="Presenter" required>
-                                        Presenter </label>
+                                        <input type="radio" id="presenter" name="category" value="Presenter" required>
+                                        Presenter
+                                    </label>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -246,19 +246,19 @@
                                     <input class="input--style-6" type="text" name="country" required>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="name">Abstract</div>
-                                <div class="value">
-                                    <div class="input-group js-input-file">
-                                        <input class="input-file" type="file" name="abstract" id="abstractFile">
-                                        <label class="label--file" for="abstractFile">Choose file</label>
-                                        <span class="input-file__info">No file chosen</span>
-                                    </div>
-                                    <div class="label--desc" style="color: #7B0404;">Before Upload your abstract file. Please download the file format abstract first.
-                                        <a href="file/abstract.docx" download="abstractformat.docx">Download</a>
-                                    </div>
+                             <div class="form-row" id="abstract-upload">
+                            <div class="name">Abstract</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="abstract" id="abstractFile">
+                                    <label class="label--file" for="abstractFile">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                                <div class="label--desc" style="color: #7B0404;font-family: 'anton', sans-serif;">Before Upload your abstract file. Please download the file format abstract first.
+                                    <a href="file/abstract.docx" style="color: #FFDE59;font-family: 'anton', sans-serif;" download="abstractformat.docx">Download</a>
                                 </div>
                             </div>
+                        </div>
                             
                             <!-- <div class="form-row">
                                 <div class="name">Fullpaper</div>
@@ -320,7 +320,7 @@
                             <p class="copy_right text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
                                 <a href="https://api.whatsapp.com/send/?phone=6285712925217&text=Hello+%3F+&type=phone_number&app_absent=0" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> Rosi Trisanti</a> | 
                                 <a href="https://www.instagram.com/iicacs?igsh=MTRiaW55MTV1aG5ocg==" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> IICACS</a> |
-                                <a href="iicacs@isi-ska.ac.id" target="_blank" > @mail </a> |
+                                <a href="mailto://iicacs@isi-ska.ac.id" target="_blank" > email </a> |
                                 <a href="https://isi-ska.ac.id/" target="_blank"><i class="fa fa-globe" aria-hidden="true"> https://isi-ska.ac.id</i></a> |
                                 <a href="https://pps.isi-ska.ac.id/" target="_blank"><i class="fa fa-globe" aria-hidden="true"> https://pps.isi-ska.ac.id/</i></a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -363,133 +363,122 @@
         <!-- 2024.06.22 mpdv - add ajax for triggered mail  -->
         <script src="dist/toasty.js"></script> 
         <script>
-            $(document).ready(function() {
-                $('.input-file').on('change', function() {
-                    var fileName = $(this).val().split('\\').pop(); 
-                    if (fileName) {
-                        $(this).siblings('.input-file__info').html(fileName);
+                $(document).ready(function() {
+            $('.input-file').on('change', function() {
+                var fileName = $(this).val().split('\\').pop(); 
+                if (fileName) {
+                    $(this).siblings('.input-file__info').html(fileName);
+                } else {
+                    $(this).siblings('.input-file__info').html('No file chosen');
+                }
+            });
+
+            const categoryRadios = document.querySelectorAll('input[name="category"]');
+            const abstractUploadDiv = document.getElementById('abstract-upload');
+
+            categoryRadios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    if (this.value === 'Participant') {
+                        abstractUploadDiv.style.display = 'none';
                     } else {
-                        $(this).siblings('.input-file__info').html('No file chosen');
+                        abstractUploadDiv.style.display = 'block';
                     }
                 });
             });
-        </script>
-        
-        <script>
+
+            // Initialize the visibility based on the initially selected radio button (if any)
+            const selectedCategory = document.querySelector('input[name="category"]:checked');
+            if (selectedCategory && selectedCategory.value === 'Participant') {
+                abstractUploadDiv.style.display = 'none';
+            } else {
+                abstractUploadDiv.style.display = 'block';
+            }
+
             let toast = new Toasty();
-            $(document).ready(function () {
-                $('#jobApplicationForm').on('submit', function (e) {
-                    $('#submits').hide();
-                    e.preventDefault(); 
-                        // Validasi untuk file upload
-                        var abstractFile = $('#abstractFile').val();
-                        // var fullpaperFile = $('#fullpaperFile').val();
-                        // var transferFile = $('#transferFile').val();
+            $('#jobApplicationForm').on('submit', function (e) {
+                $('#submits').hide();
+                e.preventDefault(); 
 
-                        var abstractFile1 = $('#abstractFile')[0].files[0];
-                        // var fullpaperFile1 = $('#fullpaperFile')[0].files[0];
-                        // var transferFile1 = $('#transferFile')[0].files[0];
+                var abstractFile = $('#abstractFile').val();
+                var abstractFile1 = $('#abstractFile')[0].files[0];
+                var maxSize = 5 * 1024 * 1024;
 
-                        var maxSize = 5 * 1024 * 1024;
+                if ($('#abstract-upload').is(':visible')) {
+                    if (abstractFile1 && abstractFile1.size > maxSize) {
+                        toast.warning('The abstract file exceeds the maximum allowed size of 5MB.');
+                        $('#submits').show();
+                        return; 
+                    }
+                    if (abstractFile === '') {
+                        toast.error("Please upload Abstract file!");
+                        $('#submits').show();
+                        return; 
+                    }
+                }
+                
+                $('#submits').hide();
+                toast.info("Please wait until processing finishes");
+                $('#loading-bar-container').show();
 
-                        // Validasi ukuran file
-                        if (abstractFile1 && abstractFile1.size > maxSize) {
-                            toast.warning('The abstract file exceeds the maximum allowed size of 5MB.');
-                            return; 
-                        }
+                let loadingBar = $('#loading-bar');
+                let loadingPercentage = 0;
 
-                        // if (fullpaperFile1 && fullpaperFile1.size > maxSize) {
-                        //     toast.warning('The fullpaper file exceeds the maximum allowed size of 5MB.');
-                        //     return;
-                        // }
+                function updateLoadingBar() {
+                    loadingPercentage += Math.floor(Math.random() * 5) + 1;
+                    if (loadingPercentage > 100) {
+                        loadingPercentage = 100;
+                    }
+                    loadingBar.css('width', loadingPercentage + '%');
+                    loadingBar.text(loadingPercentage + '%');
+                }
 
-                        // if (transferFile1 && transferFile1.size > maxSize) {
-                        //     toast.warning('The transfer evidence file exceeds the maximum allowed size of 5MB.');
-                        //     return; 
-                        // }
+                let loadingInterval = setInterval(updateLoadingBar, 200);
+                setTimeout(function() {
+                    $('#loading').show();
+                }, 5000);
 
-                        // if (abstractFile === '' || fullpaperFile === '' || transferFile === '') {
-                        if (abstractFile === '') {
-                            toast.error("Please upload Abstract file!");
-                            // alert('Please upload all files.');
-                            e.preventDefault(); 
+                $.ajax({
+                    type: 'POST',
+                    url: 'fun/register.php',
+                    data: new FormData(this),
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (response) {
+                        let count = 8;
+                        clearInterval(loadingInterval);
+                        loadingBar.css('width', '100%');
+                        loadingBar.text('100%');
+                        toast.success("Success Sending Data");  
+                        setTimeout(function () {
                             $('#submits').show();
-                        } else {
-                            
-                            $('#submits').hide();
-                            toast.info("Please wait until processing finishes");
-                            $('#loading-bar-container').show();
-
-                            let loadingBar = $('#loading-bar');
-                            let loadingPercentage = 0;
-
-                            function updateLoadingBar() {
-                                loadingPercentage += Math.floor(Math.random() * 5) + 1; // Increment acak
-                                if (loadingPercentage > 100) {
-                                    loadingPercentage = 100;
-                                }
-                                loadingBar.css('width', loadingPercentage + '%');
-                                loadingBar.text(loadingPercentage + '%');
+                            $('#loading').hide();
+                            $('#loading-bar-container').hide();
+                            $('#jobApplicationForm').trigger('reset');
+                            loadingBar.css('width', '0');
+                            loadingBar.text('0%');
+                            $('.input-file__info').text('No file chosen');
+                        }, 500);
+                        let countdownInterval = setInterval(function() {
+                            if (count > 0) {
+                                toast.info("we will go to Program Details in " + count + " seconds");
+                                count--;
+                            } else {
+                                clearInterval(countdownInterval);
+                                window.location.href = 'https://iicacs.com/register.html';
                             }
-
-                            let loadingInterval = setInterval(updateLoadingBar, 200);
-                            setTimeout(function() {
-                                $('#loading').show();
-                                // $('#loading2').show();
-                            }, 5000); //10 detik munculin loading 2
-                            // setTimeout(function() {
-                            //     $('#loading2').hide();
-                            //     $('#loading3').show();
-                            // }, 20000);  //20 detik munculin loading 3
-
-                            // AJAX request
-                            $.ajax({
-                                type: 'POST',
-                                // url: 'mail/register-nosave.php', //ini kalo mau pake yg gak di save ke db
-                                url: 'fun/register.php',
-                                data: new FormData(this),
-                                contentType: false,
-                                cache: false,
-                                processData: false,
-                                success: function (response) {
-                                    let count = 8;
-                                    clearInterval(loadingInterval); // Hentikan pembaruan loading bar
-                                    loadingBar.css('width', '100%');
-                                    loadingBar.text('100%');
-                                    toast.success("Success Sending Data");  
-                                    setTimeout(function () {
-                                        $('#submits').show();
-                                        $('#loading').hide();
-                                        $('#loading-bar-container').hide();
-                                        $('#jobApplicationForm').trigger('reset');
-                                        loadingBar.css('width', '0');
-                                        loadingBar.text('0%');
-                                        $('.input-file__info').text('No file chosen');
-                                    }, 500); // Delay sedikit untuk melihat loading bar penuh
-                                   // Countdown dinamis
-                                    let countdownInterval = setInterval(function() {
-                                        if (count > 0) {
-                                            toast.info("we will go to Program Details in " + count + " seconds");
-                                            count--;
-                                        } else {
-                                            clearInterval(countdownInterval);
-                                            // Redirect ke halaman
-                                            window.location.href = 'https://iicacs.com/Deadline.html'; //ganti aja kalo mau
-                                        }
-                                    }, 1000); 
-                                },
-                                error: function (xhr, status, error) {
-                                    clearInterval(loadingInterval); // Hentikan pembaruan loading bar
-                                    $('#loading-bar-container').hide();
-                                    $('#submits').show();
-                                    $('#loading').hide();
-                                    alert("Terjadi kesalahan: " + error);
-                                    toast.error(error);
-                                }
-                            });
-                        }
-                    });
+                        }, 1000); 
+                    },
+                    error: function (xhr, status, error) {
+                        clearInterval(loadingInterval);
+                        $('#loading-bar-container').hide();
+                        $('#submits').show();
+                        $('#loading').hide();
+                        toast.error("Error occurred: " + error);
+                    }
                 });
+            });
+        });
         </script>
     </body>
 

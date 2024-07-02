@@ -137,7 +137,7 @@ p {
   margin-bottom: 0;
   font-weight: 400;
   margin-bottom: 0px;
-  font-family: "Anton", sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 /* line 90, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
@@ -2136,6 +2136,8 @@ h3 {
   /* line 17, ../../Arafath/CL/December/236. Event-02/HTML/scss/_bradcam.scss */
   .bradcam_area .single_bradcam {
     padding: 150px 0;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 

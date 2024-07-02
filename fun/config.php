@@ -1,6 +1,6 @@
 <?php
 $isdev = FALSE;
-error_reporting(0);
+//error_reporting(0);
 
 $servername = "localhost";
 $username = $isdev==TRUE?"root":"iicacsco_app"; 

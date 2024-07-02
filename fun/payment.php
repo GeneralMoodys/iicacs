@@ -1,63 +1,103 @@
 <?php
-require_once('config.php');
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // ambil data dari form terus terapin anti antian
-    $phone = cleanInput($_POST['Phone']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    require('config.php');
+    // Ambil data dari form dan bersihkan
     $email = cleanInput($_POST['email']);
+    $phone = cleanInput($_POST['phone']);
 
-    // Buat slug dari nama lengkap
-    $slug = createSlug($email);
-    // $date = date('Y-m-d'); //format foldernya by tanggal jadi rapih cuy
-    $uploadDir = "../data/$slug/";
-
-    // folder di atas ada apa ngga? kalo ga ada ya kita buat dulu dong
-    if (!file_exists($uploadDir)) {
-        mkdir($uploadDir, 0777, true);
-    }
-    
-    // unggah file
-    //$abstractPath = uploadFile($_FILES["payment"], $uploadDir);
-    // $fullpaperPath = uploadFile($_FILES["fullpaper"], $uploadDir);
-    $transferPath = uploadFile($_FILES["transfer"], $uploadDir);
-
-    //$abstractAbsolutePath = realpath($abstractPath);
-    // $fullpaperAbsolutePath = realpath($fullpaperPath);
-     $transferAbsolutePath = realpath($transferPath);
-    
-    $stmt = $conn->prepare("UPDATE applications SET transfer_path = ? WHERE phone = ? AND email = ?)");
-    
+    // Pencarian data berdasarkan email dan phone
+    $stmt = $conn->prepare("SELECT * FROM applications WHERE email = ? AND phone = ?");
     if ($stmt === false) {
-        die("Error preparing statement: " . $conn->error);
+        echo die("Error preparing statement: " . $conn->error);
     }
+    $stmt->bind_param("ss", $email, $phone);
+    $stmt->execute();
+    $result = $stmt->get_result();
     
-    $stmt->bind_param("sss", $phone, $email, $transferPath);
-    if ($stmt->execute()) {
-        // echo "New record created successfully";
-        // sleep(2);
-        // Kirim data ke mail/payment.php menggunakan cURL
+    
+    // Jika data ditemukan, ambil datanya
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        // print_r($row);
+
+        // Data dari database
+        $full_name = cleanInput($row['full_name']);
+        $category = cleanInput($row['category']);
+        $institution = cleanInput($row['institution']);
+        $sub_institution = cleanInput($row['sub_institution']);
+        $phone = cleanInput($row['phone']);
+        $country = cleanInput($row['country']);
+
+        // Buat slug dari nama lengkap
+        $slug = createSlug($full_name);
+        $uploadDir = "../data/$slug/";
+
+        // Buat folder jika belum ada
+        if (!file_exists($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
+
+        // Unggah file update filenya
+        if (!empty($_FILES["transfer"]["name"])) {
+            $transferPath = uploadFile($_FILES["transfer"], $uploadDir);
+            $transferAbsolutePath = realpath($transferPath);
+        } else {
+            // Jika tidak ada file yang diupload, gunakan path yang sudah ada
+            $transferAbsolutePath = $row['transfer_path'];
+        }
+
+        // Persiapkan pernyataan untuk update
+        $stmt->close();
+        $stmt = $conn->prepare("UPDATE applications SET transfer_path = ? WHERE email = ? AND phone = ?");
+        if ($stmt === false) {
+            echo die(json_encode(["status" => "error", "message" => "Connection failed: " . $conn->connect_error]));
+        }
+        $stmt->bind_param("sss", $transferAbsolutePath, $email, $phone);
+
+        // Eksekusi pernyataan
+        if ($stmt->execute() === false) {
+           echo die(json_encode("Error executing statement: " . $stmt->error));
+        }
+
+         // Tanggapan sukses
+         echo json_encode("Berhasil menyimpan data");
+
+        // Kirim data ke mail/register.php menggunakan cURL
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $isdev==TRUE?"http://localhost/deviicas/mail/payment.php":"http://iicacs.com/mail/payment.php");  
+        $url = $isdev ? "http://localhost/deviicas/mail/payment.php" : "http://iicacs.com/mail/payment.php";
+        curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+            'full_name' => $full_name,
+            'category' => $category,
+            'Institution' => $institution,
+            'Sub-Institution' => $sub_institution,
             'Phone' => $phone,
             'email' => $email,
+            'country' => $country,
             'transfer_path' => $transferAbsolutePath
+            // 'abstract_path' => $abstractAbsolutePath,
+            // 'fullpaper_path' => $fullpaperAbsolutePath
         ]));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($ch);
         if ($response === false) {
             echo "cURL Error: " . curl_error($ch);
         } else {
-            echo "Email response: " . $response;
+            // echo json_encode("Email response: " . $response);
+            // echo json_encode($response);
         }
         curl_close($ch);
     } else {
-        echo "Error: " . $stmt->error;
+        // Jika data tidak ditemukan, kembalikan pesan error
+        // die("No record found with the given email and id.");
+        echo json_encode('No record found ');
+        
     }
 
+    // Tutup pernyataan dan koneksi
     $stmt->close();
+    $conn->close();
 }
-
-$conn->close();
 ?>
