@@ -1,0 +1,6 @@
+
+RewriteOptions inherit
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^submitfp$ "https\:\/\/conference\.isi\-ska\.ac\.id\/index\.php\/iicacs\/user\/register" [R=301,L]

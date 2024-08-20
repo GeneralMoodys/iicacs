@@ -731,3 +731,7 @@
 [23-Jul-2024 03:04:04 UTC] PHP Fatal error:  require_once(): Failed opening required 'fun/config.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/iicacsco/public_html/viewtable.php on line 57
 [23-Jul-2024 03:04:52 UTC] PHP Warning:  require_once(fun/config.php): failed to open stream: No such file or directory in /home/iicacsco/public_html/viewtable.php on line 57
 [23-Jul-2024 03:04:52 UTC] PHP Fatal error:  require_once(): Failed opening required 'fun/config.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/iicacsco/public_html/viewtable.php on line 57
+[14-Aug-2024 07:01:32 UTC] PHP Notice:  Undefined variable: conn in /home/iicacsco/public_html/viewtable.php on line 87
+[14-Aug-2024 07:01:32 UTC] PHP Fatal error:  Call to a member function query() on null in /home/iicacsco/public_html/viewtable.php on line 87
+[14-Aug-2024 07:01:33 UTC] PHP Notice:  Undefined variable: conn in /home/iicacsco/public_html/viewtable.php on line 87
+[14-Aug-2024 07:01:33 UTC] PHP Fatal error:  Call to a member function query() on null in /home/iicacsco/public_html/viewtable.php on line 87

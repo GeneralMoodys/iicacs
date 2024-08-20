@@ -1336,7 +1336,7 @@ h3 {
   position: absolute;
   left: 0;
   top: 120%;
-  background: #ffffff00;
+  background: #fff;
   width: 200px;
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
@@ -1364,7 +1364,7 @@ h3 {
   -o-transition: 0.3s;
   transition: 0.3s;
   display: block;
-  color: #ffde59;
+  color: #000;
 }
 
 /* line 217, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
