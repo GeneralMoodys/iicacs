@@ -1,0 +1,545 @@
+<!--<!doctype html>-->
+<html class="no-js" lang="zxx">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IICACS 2024</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
+
+        <head>
+            <link rel="icon" href="img/logo.png" type="image/x-icon">
+        </head>
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <link rel="stylesheet" href="css/gijgo.css">
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/flaticon.css">
+        <link rel="stylesheet" href="css/slicknav.css">
+        <link href="css/main.css" rel="stylesheet" media="all">
+
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+        <style>
+            .input--style-7 {
+                background: transparent;
+                line-height: 38px;
+                border: 1px solid #cccccc;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                color: #333;
+                font-size: 15px;
+                -webkit-transition: all 0.4s ease;
+                -o-transition: all 0.4s ease;
+                -moz-transition: all 0.4s ease;
+                transition: all 0.4s ease;
+                padding: 0 20px;
+            }
+
+
+            /* Style the radio buttons and labels */
+            .value {
+                display: flex;
+                flex-direction: column;
+                /* Align items vertically */
+            }
+
+            .value label {
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+                /* Space between options */
+                cursor: pointer;
+                /* Change cursor to pointer when hovering over labels */
+            }
+
+            /* Style the radio buttons */
+            .value input[type="radio"] {
+                appearance: none;
+                /* Remove default radio button styling */
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+                /* Space between the radio button and the label text */
+                border-radius: 50%;
+                /* Make it circular */
+                border: 2px solid #000;
+                /* Border for the "o" appearance */
+                position: relative;
+
+            }
+
+            /* Style the selected state */
+            .value input[type="radio"]:checked::before {
+                content: '•';
+                /* Use a bullet symbol to represent selection */
+                display: block;
+                font-size: 48px;
+                /* Size of the bullet point */
+                color: #FFDE59;
+                /* Color of the bullet point */
+                text-align: center;
+                /* Center the bullet inside the circle */
+                position: absolute;
+                top: -35px;
+                left: -7px;
+            }
+
+            .value input[type="radio"]:checked>label {
+                color: #FFDE59;
+                /* Warna ketika radio button dipilih */
+            }
+
+            /* Hide default radio button appearance */
+            .value input[type="radio"]::-webkit-radio-outer-circle {
+                display: none;
+            }
+
+            #loading-bar-container {
+                position: relative;
+                width: 100%;
+                height: 30px;
+                background-color: #f3f3f3;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+
+            #loading-bar {
+                width: 0;
+                height: 100%;
+                background-color: #4caf50;
+                text-align: center;
+                line-height: 30px;
+                /* Sama dengan tinggi loading bar untuk teks vertikal centering */
+                color: white;
+                border-radius: 5px;
+            }
+
+        </style>
+        <link href="dist/toasty.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="img/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="register.html">Register</a>
+                                               
+                                            </li>
+                                            <li><a href="payment.html">Payment</a></li>
+                                            <li><a href="#">Fullpaper<i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="https://conference.isi-ska.ac.id/index.php/iicacs/user/register">Submit fullpaper</a></li>
+                                                    <li><a href="file/fullpaper.docx" download="abstractformat.docx">Download</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="confrence.html">Conference</a></li>
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="buy_tkt">
+                                    <!-- <div class="book_btn d-none d-lg-block">
+                                            <a href="register.html">Register</a>
+                                        </div> -->
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- bradcam_area -->
+        <div class="page-wrapper bg-dark p-t-100 p-b-50">
+            <div class="wrapper wrapper--w900">
+                <div class="card card-6">
+                    <div class="card-heading">
+                        <h2 class="title">Register</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data" id="jobApplicationForm">
+                            <div class="form-row">
+                                <div class="name">Full name</div>
+                                <div class="value">
+                                    <input class="input--style-6" type="text" name="full_name" min="3"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Category</div>
+                                <div class="value">
+                                    <label class="radio-inline" for="participant" style="color: #f7f1f1;" hidden>
+                                        <input type="radio" id="participant" name="category" value="Participant" checked>
+                                        Participant
+                                    </label>
+                                    <label class="radio-inline" for="participant"
+                                        style="color: #f7f1f1;">
+                                        <input type="radio" id="participant" name="category"
+                                            value="Participant" required>
+                                        Participant
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Institution Organization</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-6" type="text" name="Institution"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Sub-Institution</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-6" type="text"
+                                            name="Sub-Institution"
+                                            placeholder="example: Fakultas Ilmu Pendidikan"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Phone Number</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-6" type="tel" name="Phone"
+                                            placeholder="example: 08xxxx" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Email</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-6" type="email" name="email"
+                                            placeholder="example@gmail.com" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Country</div>
+                                <div class="value">
+                                    <input class="input--style-6" type="text" name="country"
+                                        required>
+                                </div>
+                            </div>
+                            <!-- <div class="form-row" id="abstract-upload">
+                                <div class="name">Abstract</div>
+                                <div class="value">
+                                    <div class="input-group js-input-file">
+                                        <input class="input-file" type="file" name="abstract"
+                                            id="abstractFile">
+                                        <label class="label--file" for="abstractFile">Choose
+                                            file</label>
+                                        <span class="input-file__info">No file chosen</span>
+                                    </div>
+                                    <div class="label--desc"
+                                        style="color: #7B0404;font-family: 'anton', sans-serif;">
+                                        Before Upload your abstract file. Please download the file
+                                        format abstract first.
+                                        <a href="file/abstract.docx"
+                                            style="color: #FFDE59;font-family: 'anton', sans-serif;"
+                                            download="abstractformat.docx">Download</a>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <!-- <div class="form-row">
+                                <div class="name">Fullpaper</div>
+                                <div class="value">
+                                    <div class="input-group js-input-file">
+                                        <input class="input-file" type="file" name="fullpaper" id="fullpaperFile">
+                                        <label class="label--file" for="fullpaperFile">Choose file</label>
+                                        <span class="input-file__info">No file chosen</span>
+                                    </div>
+                                     <div class="label--desc" style="color: #7B0404;">Before Upload your Full-paper file. Please download the file format Full-paper first.
+                                        <a href="file/fullpaper.docx" download="fullpapersubmit.docx">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="name">Transfer Evidence</div>
+                                <div class="value">
+                                    <div class="input-group js-input-file">
+                                        <input class="input-file" type="file" name="transfer" id="transferFile">
+                                        <label class="label--file" for="transferFile">Choose file</label>
+                                        <span class="input-file__info">No file chosen</span>
+                                    </div>
+                                    <div class="label--desc">Upload your transfer evidence file. Max file size 5 MB</div>
+                                </div>
+                            </div> -->
+                            <div id="loading-bar-container"
+                                style="display: none; position: relative; width: 100%; height: 30px; background-color: #f3f3f3; border-radius: 5px; margin-top: 10px;">
+                                <div id="loading-bar"
+                                    style="width: 0; height: 100%; background-color: #4caf50; text-align: center; line-height: 30px; color: white; border-radius: 5px;">
+                                    0%</div>
+                            </div>
+
+
+                            <div class="card-footer">
+                                <div class="label--desc"
+                                    style="color: #7B0404; padding-bottom: 10px; font-family: 'anton', sans-serif;">
+                                    Attention, please! The saved data cannot be changed! make sure
+                                    every data filled in is correct.
+                                </div>
+                                <button class="btn btn--radius-2 btn--blue-2" type="submit"
+                                    id="submits">Submit</button>
+
+                                <!-- header-end -->
+                                <div id="loading" style="display: none; width: 100%!important;">
+                                    It's being processed, please wait 😉 the data upload speed to
+                                    the server follows your internet connection 🚀
+                                </div>
+                                <div id="loading2" style="display: none; width: 100%!important;">
+                                    Almost Done 😊
+                                </div>
+                                <div id="loading3" style="display: none; width: 100%!important;">
+                                    huh, look we need more time for upload Big Sizes 🥴
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer ">
+            <div class="copy-right_text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="copy_right text-center wow fadeInDown" data-wow-duration="1s"
+                                data-wow-delay=".5s">
+                                <a href="https://api.whatsapp.com/send/?phone=6285712925217&text=Hello+%3F+&type=phone_number&app_absent=0"
+                                    target="_blank"><i class="fa fa-whatsapp"
+                                        aria-hidden="true"></i> Rosi Trisanti</a> |
+                                <a href="https://www.instagram.com/iicacs?igsh=MTRiaW55MTV1aG5ocg=="
+                                    target="_blank"><i class="fa fa-instagram"
+                                        aria-hidden="true"></i> IICACS</a> |
+                                <a href="mailto://iicacs@isi-ska.ac.id" target="_blank"> email </a>
+                                |
+                                <a href="https://isi-ska.ac.id/" target="_blank"><i
+                                        class="fa fa-globe" aria-hidden="true">
+                                        https://isi-ska.ac.id</i></a> |
+                                <a href="https://pps.isi-ska.ac.id/" target="_blank"><i
+                                        class="fa fa-globe" aria-hidden="true">
+                                        https://pps.isi-ska.ac.id/</i></a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/scrollIt.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/gijgo.min.js"></script>
+        <script src="js/nice-select.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/tilt.jquery.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery.countdown/jquery.countdown.min.js"></script>
+
+        <!--contact js-->
+        <script src="js/contact.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- 2024.06.22 mpdv - add ajax for triggered mail  -->
+        <script src="dist/toasty.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.input-file').on('change', function () {
+                    var fileName = $(this).val().split('\\').pop();
+                    if (fileName) {
+                        $(this).siblings('.input-file__info').html(fileName);
+                    } else {
+                        $(this).siblings('.input-file__info').html('No file chosen');
+                    }
+                });
+
+
+                // Handling perubahan radio button category
+                const categoryRadios = document.querySelectorAll('input[name="category"]');
+                const abstractUploadDiv = document.getElementById('abstract-upload');
+
+                categoryRadios.forEach(radio => {
+                    radio.addEventListener('change', function () {
+                        if (this.value === 'Participant') {
+                            abstractUploadDiv.style.display = 'none';
+                        } else {
+                            abstractUploadDiv.style.display = 'block';
+                        }
+                    });
+                });
+
+                // Mengatur visibilitas awal berdasarkan radio button yang sudah dipilih (jika ada)
+                const selectedCategory = document.querySelector('input[name="category"]:checked');
+                if (selectedCategory && selectedCategory.value === 'Participant') {
+                    abstractUploadDiv.style.display = 'none';
+                } else {
+                    abstractUploadDiv.style.display = 'block';
+                }
+
+                let toast = new Toasty();
+
+                // Form submit handler
+                $('#jobApplicationForm').on('submit', function (e) {
+                    e.preventDefault(); // Mencegah pengiriman form default
+
+                    $('#submits').hide(); // Menyembunyikan tombol submit
+
+                    // Pengecekan jika abstract-upload visible
+                    if ($('#abstract-upload').is(':visible')) {
+                        var abstractFile1 = $('#abstractFile')[0].files[0];
+                        var maxSize = 5 * 1024 * 1024; // 5MB dalam byte
+
+                        if (abstractFile1) {
+                            if (abstractFile1.size > maxSize) {
+                                toast.warning('The abstract file exceeds the maximum allowed size of 5MB.');
+                                $('#submits').show();
+                                return; // Berhenti jika file terlalu besar
+                            }
+                        } else {
+                            toast.error("Please upload Abstract file!");
+                            $('#submits').show();
+                            return; // Berhenti jika tidak ada file yang diupload
+                        }
+                    }
+
+                    // Menampilkan loading bar dan status
+                    toast.info("Please wait until processing finishes");
+                    $('#loading-bar-container').show();
+
+                    let loadingBar = $('#loading-bar');
+                    let loadingPercentage = 0;
+
+                    function updateLoadingBar() {
+                        loadingPercentage += Math.floor(Math.random() * 5) + 1;
+                        if (loadingPercentage > 100) {
+                            loadingPercentage = 100;
+                        }
+                        loadingBar.css('width', loadingPercentage + '%');
+                        loadingBar.text(loadingPercentage + '%');
+                    }
+
+                    let loadingInterval = setInterval(updateLoadingBar, 200);
+
+                    setTimeout(function () {
+                        $('#loading').show();
+                    }, 5000);
+
+                    // Mengirim data form melalui AJAX
+                    $.ajax({
+                        type: 'POST',
+                        url: 'func/register.php',
+                        data: new FormData(this),
+                        contentType: false,
+                        cache: false,
+                        processData: false,
+                        success: function (response) {
+                            clearInterval(loadingInterval);
+                            loadingBar.css('width', '100%');
+                            loadingBar.text('100%');
+
+                            if (typeof response === 'string') {
+                                try {
+                                    response = JSON.parse(response);
+                                } catch (e) {
+                                    console.error("Tidak dapat menguraikan respons JSON:", e);
+                                    toast.error("Terjadi kesalahan saat memproses data.");
+                                    return;
+                                }
+                            }
+
+                            // Akses properti response dengan aman
+                            if (response && response.status && response.message) {
+                                if (response.status === 'error') {
+                                    toast.error(response.message);
+                                } else {
+                                    toast.success(response.message);
+                                }
+                            } else {
+                                toast.error("Format respons tidak valid.");
+                            }
+
+                            setTimeout(function () {
+                                $('#submits').show();
+                                $('#loading').hide();
+                                $('#loading-bar-container').hide();
+                                $('#jobApplicationForm').trigger('reset');
+                                loadingBar.css('width', '0');
+                                loadingBar.text('0%');
+                                $('.input-file__info').text('No file chosen');
+                            }, 500);
+                        },
+                        error: function (xhr, status, error) {
+                            clearInterval(loadingInterval);
+                            $('#loading-bar-container').hide();
+                            $('#submits').show();
+                            $('#loading').hide();
+                            toast.error("Error occurred: " + error);
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+
+</html>
